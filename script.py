@@ -84,6 +84,7 @@ try:
 
             if args.source is not None:
                 s = args.source
+                normalized_metric = metric
             else:
                 # rebuild our metric without the source
                 normalized_metric = metric.split('.')
