@@ -38,6 +38,9 @@ parser.add_argument('-n', '--node', default=1,
 parser.add_argument('-p', '--prefix', default=None,
                     help='Prefix for metric name')
 
+parser.add_argument('-s', '--source', default=None,
+                    help='Source string override')
+
 parser.add_argument('-u', '--url', default='http://127.0.0.1',
                     help='Graphite server URL')
 
@@ -79,10 +82,17 @@ try:
             except IndexError:
                 print "invalid node index"
 
-            # rebuild our metric without the source
-            normalized_metric = metric.split('.')
-            normalized_metric.pop(int(args.node))
-            normalized_metric = '.'.join(normalized_metric)
+            if args.source is not None:
+                if not args.source:
+                    s = None
+                else:
+                    s = args.source
+                normalized_metric = metric
+            else:
+                # rebuild our metric without the source
+                normalized_metric = metric.split('.')
+                normalized_metric.pop(int(args.node))
+                normalized_metric = '.'.join(normalized_metric)
 
             # clean-up and apply any prefix
             prefix = args.prefix
