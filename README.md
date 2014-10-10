@@ -68,6 +68,13 @@ Processing collectd.graphite-0-1.load.load.shortterm:
 ...
 ```
 
+### Sample Results
+
+The following screenshots demonstrate Libratomize's ability to maintain the proper resolution during the migration. The first chart is a 3-hour window of a single metric on the source Graphite server. The second chart is the same 3-hour window after the metric has been copied to the Librato service.
+
+![Graphite](https://github.com/obfuscurity/libratomize/raw/master/img/sample-0.png)
+![Librato](https://github.com/obfuscurity/libratomize/raw/master/img/sample-1.png)
+
 ### License
 
 Libratomize is distributed under the MIT license.
