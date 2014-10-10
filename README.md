@@ -12,6 +12,12 @@ Rather than attempting to coerce the raw Whisper archives to match Librato's [re
 
 ## Usage
 
+### Dependencies
+
+```
+$ pip install librato
+```
+
 ### Environment Variables
 
 The following variables are used to authenticate with the Librato API and are *mandatory*. See [this article](http://support.metrics.librato.com/knowledgebase/articles/22317-librato-api-tokens-and-token-roles) which explains how to create your own Librato API token.
