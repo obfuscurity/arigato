@@ -25,7 +25,7 @@ The following arguments are available.
 
 #### Using Carbonate locally
 
-The `carbon-list` utility provided by the [Carbonate]() project is ideal for listing metrics on the Graphite server itself. The results can then by piped into Libratomize.
+The `carbon-list` utility provided by the [Carbonate](https://github.com/jssjr/carbonate) project is ideal for listing metrics on the Graphite server itself. The results can then by piped into Libratomize.
 
 ```
 $ export PYTHONPATH=$PYTHONPATH:/opt/graphite/lib
