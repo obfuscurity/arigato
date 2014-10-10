@@ -63,3 +63,7 @@ Processing collectd.graphite-0-1.load.load.shortterm:
     Archive submitted successfully
 ...
 ```
+
+### License
+
+Libratomize is distributed under the MIT license.
