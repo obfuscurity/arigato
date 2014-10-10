@@ -8,7 +8,7 @@ Arigato is a Python script for performing a one-time migration of your Graphite 
 
 Rather than attempting to coerce the raw Whisper archives to match Librato's [resolution levels](http://support.metrics.librato.com/knowledgebase/articles/66838-understanding-metrics-roll-ups-retention-and-grap), Arigato performs logical queries against the Graphite API, using `summarize()` to roll the results up into compatible resolutions for each interval.
 
-**Note:** By default, Librato will not accept any data [older than 2 hours](http://support.metrics.librato.com/knowledgebase/articles/334530-can-i-send-measurements-from-the-past-or-future). To bypass this restriction you'll need to contact Librato Support for a temporary lifting of this policy using their beta "historical import" feature.
+**Note:** By default, Librato will not accept any data [older than 2 hours](http://support.metrics.librato.com/knowledgebase/articles/334530-can-i-send-measurements-from-the-past-or-future). To bypass this restriction you'll need to contact Librato Support for a temporary lifting of this policy using their beta "historical import" feature. Users will experience a slight delay (before the data is visible in the UI) while Librato generates summary statistics from the new data.
 
 ## Usage
 
