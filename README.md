@@ -25,6 +25,8 @@ The following arguments are available.
 
 ### Examples
 
+Libratomize accepts a list of metric names passed to `STDIN`.
+
 In both of the examples below, we're filtering the results to *only* match `collectd` results, so the `node` argument doesn't need to be specified. The default collectd format passes the hostname in the 2nd (index value `1`) node of the metric string.
 
 **Note:** It may be necessary to migrate portions of your metric namespace at a time to ensure proper `source` identification.
