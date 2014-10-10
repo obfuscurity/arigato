@@ -31,6 +31,7 @@ The following arguments are available.
 
 * `-n, --node` - Zero-indexed node from the Graphite metric string to use as the Librato [source](http://support.metrics.librato.com/knowledgebase/articles/47904-what-is-a-source). The default value is `1`.
 * `-p, --prefix` - A string prefix for the Librato metric. All whitespace and leading/trailing dots are removed from the string before prefixing to the original metric string. Delimiters found within the prefix are preserved (e.g. `foo.bar`) but multiples (e.g. `foo..bar`) will be normalized to a single dot. There is no default prefix.
+* `-s, --source` - Manual override of the `source` value derived from `node`. When set to a string, it will set the source to that value. When set to an *empty string* (e.g. `-s ""`), it will report the source as `unassigned`.
 * `-u, --url` - The Graphite server URL to query. Uses `http://127.0.0.1` by default.
 
 ### Examples
