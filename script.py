@@ -83,7 +83,10 @@ try:
                 print "invalid node index"
 
             if args.source is not None:
-                s = args.source
+                if not args.source:
+                    s = None
+                else:
+                    s = args.source
                 normalized_metric = metric
             else:
                 # rebuild our metric without the source
