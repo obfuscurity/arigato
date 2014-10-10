@@ -15,7 +15,7 @@ Rather than attempting to coerce the raw Whisper archives to match Librato's [re
 ### Dependencies
 
 ```
-$ pip install librato
+$ pip install librato-metrics
 ```
 
 ### Environment Variables
