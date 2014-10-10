@@ -31,6 +31,7 @@ The `carbon-list` utility provided by the [Carbonate]() project is ideal for lis
 $ export PYTHONPATH=$PYTHONPATH:/opt/graphite/lib
 $ export LIBRATO_USER=abc
 $ export LIBRATO_TOKEN=123
+
 $ carbon-list | grep '^collectd' | \
   python libratomize/script.py -p migrated
 
@@ -50,6 +51,7 @@ This method is slightly more convenient if you don't have local access to your G
 $ export PYTHONPATH=$PYTHONPATH:/opt/graphite/lib
 $ export LIBRATO_USER=abc
 $ export LIBRATO_TOKEN=123
+
 $ curl -s http://graphite/metrics/index.json | python -m json.tool | \
   grep '"' | sed 's/ //g' | sed 's/"//g' | sed 's/,//g' | grep '^collectd' | \
   python libratomize/script.py -p migrated
