@@ -60,7 +60,6 @@ Processing collectd.graphite-0-1.load.load.shortterm:
 This method is slightly more convenient if you don't have local access to your Graphite server **or** you can't install Carbonate **or** you want to iterate through a cluster Graphite servers. It does require a bit more effort to prep the output before passing it onto Arigato, however.
 
 ```
-$ export PYTHONPATH=$PYTHONPATH:/opt/graphite/lib
 $ export LIBRATO_USER=abc
 $ export LIBRATO_TOKEN=123
 
