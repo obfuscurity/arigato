@@ -60,10 +60,10 @@ except KeyError:
 # 1 month at 15 minute resolution
 # 1 year at 1 hour resolution
 retentions = [
-    "/render/?from=-2days&target=%s&format=json",
-    "/render/?from=-1week&until=-2days&target=summarize(%s,\"1min\")&format=json",
-    "/render/?from=-1month&until=-1week&target=summarize(%s,\"15min\")&format=json",
-    "/render/?from=-1year&until=-1month&target=summarize(%s,\"1hour\")&format=json"]
+    "?from=-2days&target=%s&format=json",
+    "?from=-1week&until=-2days&target=summarize(%s,\"1min\")&format=json",
+    "?from=-1month&until=-1week&target=summarize(%s,\"15min\")&format=json",
+    "?from=-1year&until=-1month&target=summarize(%s,\"1hour\")&format=json"]
 
 try:
     for metric in fileinput.input([]):
@@ -73,7 +73,7 @@ try:
 
             # construct our Graphite queries
             metric = metric.strip()
-            uri = query % metric
+            uri = '/render/?' + query % metric
             u1 = urllib2.urlopen(args.url + uri)
 
             try:
