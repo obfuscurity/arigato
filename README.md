@@ -1,6 +1,6 @@
 # Libratomize
 
-Libratomize is a Python script for performing a one-time migration of your Graphite metrics to the [Librato](https://metrics.librato.com/) monitoring service. It's assumed that you've already transitioned your live metrics feed over to Librato. This utility is only for backfilling the historical data.
+Libratomize is a Python script for performing a one-time migration of your Graphite metrics to the [Librato](https://metrics.librato.com/) monitoring service. It's assumed that you've already transitioned your live metrics feed over to Librato. This utility should only be used to backfill your historical data.
 
 Rather than attempting to coerce the raw Whisper archives to match Librato's [resolution levels](http://support.metrics.librato.com/knowledgebase/articles/66838-understanding-metrics-roll-ups-retention-and-grap), Libratomize performs logical queries against the Graphite API, using `summarize()` to roll the results up into compatible resolutions for each interval.
 
